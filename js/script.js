@@ -13,7 +13,7 @@ var marker = null;
 
 mymap.on('load', () => {
     var myIcon = L.icon({
-        iconUrl: '../assets/icon-location.svg',
+        iconUrl: './assets/icon-location.svg',
         iconSize: [46, 56],
         iconAnchor: [22, 94],
         popupAnchor: [-3, -76],
