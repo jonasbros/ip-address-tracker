@@ -43,7 +43,7 @@ search.addEventListener( 'mouseup', (e) => {
     execute();
 } );    
 
-search.addEventListener('keypress', function (e) {
+window.addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
       execute();
     }
