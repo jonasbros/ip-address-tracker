@@ -40,6 +40,16 @@ getIpify(ipifyUrl);
 
 
 search.addEventListener( 'mouseup', (e) => { 
+    execute();
+} );    
+
+search.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+      execute();
+    }
+});
+
+function execute() {
     if( !searchText.value ) return;
 
     if( ValidateIPaddress(searchText.value) ) {
@@ -49,7 +59,7 @@ search.addEventListener( 'mouseup', (e) => {
     }
 
     getIpify(ipifyUrl);
-} );
+}
 
 ///////////////////////
 function getIpify(url) {
