@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IP Address Tracker</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+        <link rel="stylesheet" href="css/style.css">
+        
+        <link rel="icon" href="assets/favicon-32x32.png" type="image/png">
+    </head>
+    <body>
+        <main class="container is-fullhd">
+            <div id="top" class="columns">
+                <div class="column is-full">
+                    <h1>IP Address Tracker</h1>
+
+                    <div id="input-container">                        
+                        <div class="field has-addons">
+                            <div class="control text-control">
+                                <input  class="input" type="text" id="ip-input" placeholder="Search for any IP address or domain">
+                            </div>
+
+                            <div class="control">
+                                <a id="search-btn" class="button">
+                                    <img src="assets/icon-arrow.svg" alt="Search button"> 
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="results-container">
+                        <ul>
+                            <li id="result__ip-address">
+                                <small>IP Address</small>
+                                <p>--</p>
+                            </li>
+                            
+                            <li id="result__location">
+                                <small>Location</small>
+                                <p>--</p>
+                            </li>
+
+                            <li id="result__timezone">
+                                <small>Timezone</small>
+                                <p>--</p>
+                            </li>      
+
+                            <li id="result__isp">
+                                <small>ISP</small>
+                                <p>--</p>
+                            </li>                                                    
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="bottom" class="columns">
+                <div class="column is-full">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </main>
+         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
